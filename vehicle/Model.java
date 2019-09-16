@@ -1,5 +1,7 @@
 package vehicle;
 
+import java.util.Arrays;
+
 public class Model {
 	private String BodyType;
 	private String ModelName;
@@ -15,6 +17,12 @@ public class Model {
 		BodyType = Bt;
 		ModelName = Mn;
 		TrimPackage = tP;
+	}
+	
+	@Override
+	public String toString() {
+		return "Model [BodyType=" + BodyType + ", ModelName=" + ModelName + ", TrimPackage="
+				+ Arrays.toString(TrimPackage) + "]";
 	}
 	
 	public String getBodyType() {

@@ -46,6 +46,14 @@ public class Automobile extends Vehicle {
 		
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Automobile [Trunk=" + Trunk + ", AC=" + AC + ", Tint=" + Tint + ", Owner=" + Owner + ", Title=" + Title
+				+ ", doors=" + doors + ",\n AutoMake=" + AutoMake + ",\n AutoModel=" + AutoModel + "]";
+	}
+
 	public Maker getAutoMake() {
 		return AutoMake;
 	}
@@ -116,10 +124,10 @@ public class Automobile extends Vehicle {
 		
 	}
 	catch(Exception e) {
-		Mpg = 13;
-		pass = 2;
-		fuelcap = 100;
-		weight = 3000;
+		Mpg = 23;
+		pass = 3;
+		fuelcap = 400;
+		weight = 2000;
 		
 		System.out.println("Bad Trim Package");
 	}
@@ -138,9 +146,16 @@ public class Automobile extends Vehicle {
 	
 	public void getMakerandModel() {
 		AutoMake.getMake();
-		System.out.println(AutoModel.getModelName());
+		AutoModel.getModelName();
 	}
 	
+	public String getBodyT() {
+		return AutoModel.getBodyType();
+	}
+	
+	public String getModelN() {
+		return AutoModel.getModelName();
+	}
 
 }
 

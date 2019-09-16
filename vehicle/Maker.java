@@ -2,15 +2,13 @@ package vehicle;
 
 import javax.swing.*;
 
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.time.LocalDateTime;
 import javax.swing.ImageIcon;
 
 public class Maker {
-	
-	ImageIcon imgmack = new ImageIcon("Mack-logo.png");
-	 ClassLoader ldr= this.getClass().getClassLoader();
+	ImageIcon imgmack = new ImageIcon("macklogo.jpg");
 		 String company;
 		 String location;
 		 Date mintdate;
@@ -19,6 +17,12 @@ public class Maker {
 		 String webSite;
 		 
 		
+		@Override
+		public String toString() {
+			return "Maker [imgmack=" + imgmack + ", company=" + company + ", location=" + location + ", mintdate="
+					+ mintdate + ", logo=" + logo + ", phone=" + phone + ", webSite=" + webSite + "]";
+		}
+
 		Maker() {
 			company = "Mack";
 			location = "Greensboro, NC";
@@ -42,27 +46,12 @@ public class Maker {
 	     ImageIcon getLogo() {
 	    	 return logo;
 	     }
+	     
 	     String getMake() {
 	    	 return company;
 	    	 
 	     }
 	
 
-  class MakeDisplay extends JFrame {
 
-	JPanel pnl = new JPanel();
-	 ImageIcon mack = logo;
-	 JLabel lbl1 = new JLabel(mack);
-	 
-	 MakeDisplay() {
-		 super("Mack-logo");
-		 setSize(600,600);
-		 setDefaultCloseOperation(EXIT_ON_CLOSE);
-		 add(pnl);
-		 pnl.add(lbl1);
-		 setVisible(true);
-	 }
-  }
 }
-
-
